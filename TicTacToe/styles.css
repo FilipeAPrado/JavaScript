@@ -1,0 +1,61 @@
+.game {
+    width: 500px;
+	height: 500px;
+	margin: 0 auto;
+    background-color: #350632;
+    color: #fff;
+    border: 6px solid #220a20;
+    border-radius: 10px;
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.game > div {
+  border: 6px solid #220a20;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.game > div:hover{
+  background-color: #6b0d65;
+}
+
+.button{
+  width: 60px;
+  background-color: #e0e0e0;
+  height: 20px;
+  border: 5px solid #220a20;
+  border-radius: 10px;
+  font-size: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  margin:8px auto;
+
+  
+}
+.playerWins{
+  width: 60px;
+  background-color: #e0e0e0;
+  height: 20px;
+  border: 5px solid #220a20;
+  border-radius: 10px;
+  font-size: 100%;
+
+}
+.winner{
+  display: flex;
+  align-items: center; 
+  align-content: center;
+}
+.title{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+}
