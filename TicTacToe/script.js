@@ -47,7 +47,7 @@ const ticTacToe = {
 
 
 
-    makePlay: function (position) {
+    makePlay: function (position) {       //função que faz com que o jogo funcione
         if (this.gameOver) return false;
         if (this.board[position] === '') {
             this.board[position] = this.simbols.options[this.simbols.turnIndex];
@@ -95,7 +95,7 @@ const ticTacToe = {
 
         return -1;
     },
-    start: function () {
+    start: function () {         //função que starta o jogo 
         this.board.fill('');
         this.draw();
         this.playerWinner.innerHTML = ''
