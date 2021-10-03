@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Testing interactions objects with get and set </title>
+</head>
+
+<body>
+
+    <script>
+        var users = [{
+            name: 'Lucas',
+            magic: 'Mentalism'
+        },
+        {
+            name: 'Amanda',
+            magic: 'Natural witch'
+        },
+        {
+            name: 'Nikolas',
+            magic: 'Dark Druid'
+        }
+        ];
+        console.log(users[1].name);
+        var user = {
+            get current() {
+                return users[this.position];
+            },
+            set current(position) {
+                this.position = position;
+            },
+            position: 0,
+            next() {
+                ++this.position;
+            },
+            previous() {
+                --this.position;
+            }
+
+
+        };
+        console.log(user.current); //{name : 'Lucas',magic : 'Mentalism'}
+        user.next();
+        console.log(user.current); //{name : 'Amanda',magic :'Natural witch'}
+        user.previous();
+        console.log(user.current); //{name : 'Lucas',magic : 'Mentalism'}
+        user.next();
+        console.log(user.current); //{name : 'Amanda',magic :'Natural witch'}
+        user.next();
+        console.log(user.current); //{name : 'Nikolas',magic : 'Dark Druid'}
+        user.current = 0;
+        console.log(user.current);//{name : 'Lucas',magic : 'Mentalism'}
+        user.current = 2;
+        console.log(user.current); //{name : 'Nikolas',magic : 'Dark Druid'}
+
+
+
+        function callback(e) {
+    alert('Aconteceu um evento ' + e.type);
+}
+window.addEventListener('click', callback);
+
+    </script>
+</body>
+
+</html>

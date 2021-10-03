@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Criando objetos!</title>
+</head>
+<body>
+	<script>
+		var Usuario = {
+			nome: 'Filipe',
+			idade: '22',
+			site:'teste',
+			'ultimo-nome':'Prado'
+		};
+		console.log(Usuario);
+		console.log(Usuario.idade);
+		console.log(Usuario.site);
+		console.log(Usuario['ultimo-nome']);
+		console.log(Usuario.nome,Usuario['ultimo-nome'],'tem ',Usuario.idade,' anos.');
+		Usuario.cpf = 2020201548;
+		console.log(Usuario.cpf);
+		Usuario.hobbies = [
+		'ouvir musica',
+		'cantar',
+		'jogar fps']
+		console.log(Usuario.hobbies);
+		var Usuario2 = {
+			nome:'tete',
+			idade:'só deus sabe',
+			site: "https://github.com/Hernandesjunio"
+		};
+		var novoUsuario = Object.assign({},Usuario,Usuario2);
+		console.log(novoUsuario);
+
+
+	</script>
+
+</body>
+</html>	

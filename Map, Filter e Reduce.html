@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <Title> Map Filter Reduce</Title>
+    </header>
+    <body>
+        <script>
+            const nums = [ 2,3,6,5,10];
+            let newnums = [];
+            for (let i = 0; i< nums.length; i++){
+               newnums.push(nums[i] * 2);
+            };
+            console.log(nums);
+            console.log(newnums);
+            //map
+            const newArrayMap = nums.map(function(num){
+                return num * 2;
+            });
+            console.log(newArrayMap);
+            //map + arrow function
+            const arrowArrayMap = nums.map(num => num *3);
+            //console.log(arrowArrayMap);
+            
+
+            const names = ['Amanda','Melisa','Dinopiro'];
+            const nameslower = names.map(function(name){
+                return name.toLowerCase();
+            });
+            //console.log(nameslower);
+
+            //filter
+
+            const numsFilters = nums.filter(num => num % 2 == 0);
+            //console.log(numsFilters);
+
+            // filter map
+            const numsfiltermap = nums.filter(num => num % 2 ==0).map(num =>num * 2);
+            //console.log(numsfiltermap);
+
+            // reduce
+            let sum = 0;
+            for (let i= 0 ; i <nums.length; i++){
+                sum = sum + nums[i];
+            };
+            console.log('for normal ',sum);
+            const numreduce = nums.reduce(function(valueAccumulator,valueArray ){
+                return valueAccumulator + valueArray;
+            },0);
+            console.log('reduce',numreduce);
+            //---------------------------------------------------------------------------------------------------
+
+
+
+
+
+            
+            var people = [
+            {
+                name : 'Fabiana',
+                age :39
+            },
+            {
+                name : 'Adriano',
+                age :42
+            },
+            {
+                name : "Zavra",
+                age : 2
+            },
+            {
+                name : 'Lucas',
+                age : 18
+            },
+            {
+                name : "Marcos",
+                age : 17
+            }
+            ];
+            const peoplesAgrupped = people.reduce(function(valueAccumulator,valueArray) {
+                const propBiggerOrSmall = valueArray.age >= 18 ? 'bigger' : 'small';
+
+                valueAccumulator[propBiggerOrSmall].push(valueArray);
+
+                return valueAccumulator; 
+
+            }, { bigger: [],small: []});
+
+            console.log(peoplesAgrupped);
+
+    
+            
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

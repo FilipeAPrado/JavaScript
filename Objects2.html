@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing interactions objects with for ,for of and for in  </title>
+</head>
+
+<body>
+    <script>
+        var words = {
+            um : 'Teia',
+            dois : 'Noe',
+            tres :'Mae',
+            quatro : 'Cão',
+            cinco : 'Lua',
+            seis : 'Osso',
+            sete : 'Fio',
+            oito : 'Agua',
+            nove : 'Pião',
+            dez  : 'Touro',
+            onze : 'Teta',
+            doze : 'Tina',
+            treze : 'Time',
+            quatorze :'Toca',
+            
+        };
+        var memo = Object.keys(words);
+        console.log(memo);
+        for (var i = 0; i <memo.length; i++){
+           // console.log(words[memo[i]]);
+        };
+        for(memor of memo ){
+            console.log('words',words[memor]);
+        };
+        for (memor2 in words){
+            console.log(memor2,words[memor2]);
+        };
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Testando funções</title>
+</head>
+<body>
+	<script>
+
+		function somaTudo(numeros){
+			var total = 0;
+		
+			for (var num of numeros){
+				total = total + num;
+			}
+			
+			return total;
+		}
+		var arrayaleatorios = [3,5,7,10,9,12,80];
+		var resultado = somaTudo(arrayaleatorios);
+		console.log(resultado);
+
+
+		function olhamaior(numeros){
+			var maior = 0;
+		
+			for (var num of numeros){
+				if (maior<num) {
+					maior = 0 + num;
+				}
+			}
+			
+			return maior;
+		}
+		var nummaior = olhamaior(arrayaleatorios);
+		console.log(nummaior);
+	</script>
+	
+</body>

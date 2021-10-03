@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Functions 2 </title>
+</header>
+
+<body>
+    <script>
+        function user() {
+            this.name = 'Portigas d. Ace',
+                this.akumanomi = 'Mera Mera no Mi',
+                this.sum = function (a, b) {
+                    return a + b;
+                };
+        };
+        var user = new user();
+        console.log(user);
+        console.log(user.name, 'é usuario da ', user.akumanomi);
+        console.log(user.sum(166, 500));
+        //call
+        function Character(p1,p2,p3) {
+            console.log(p1,p2,p3);
+            console.log(this);
+        };
+        var CharacterThis = {
+            name: 'Sanji Vinsmoke',
+            skills: 'estilo Perna Negra'
+        };
+        //Character.call(CharacterThis,0,4,16);
+        //Apply
+        //Character.apply(CharacterThis,['Membro','Dos Chapeu de Palha:','Cozinheiro chef']);
+
+        //-----------------------------------------------------------------------------------
+
+        //bind
+        var sanji = Character.bind(CharacterThis,'Membro','Dos Chapeu de Palha:','Cozinheiro chefe');
+        sanji();
+
+        //Arrow Functions
+
+        //var sum =(a,b) => {
+          //  return a +b;
+        //};
+        var sum = (a,b) => a + b;
+        console.log(sum(15,15));
+
+        var returncharacter = (cidade) => ( { nome : 'Baby Boy',idade: 16,cidade});
+        console.log(returncharacter('Camcum'));
+
+    </script>
+</body>
+
+</html>
